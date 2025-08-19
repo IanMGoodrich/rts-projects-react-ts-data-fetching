@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,58 +11,78 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: 3rem auto;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+main > img {
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  margin: 2rem auto;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #a1ecfb;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.5rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#blog-posts ul {
+  list-style: none;
+  margin: 2rem auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#blog-posts li {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #333;
+}
+
+#blog-posts h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  color: #9c9aa0;
+}
+
+#blog-posts p {
+  margin: 1rem 0 0 0;
+  font-size: 1.1rem;
+  color: #9f98ae;
+  text-transform: capitalize;
+}
+
+#loading-fallback {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 3rem auto;
+}
+
+#error {
+  border: 1px solid #ff0055;
+  color: #e6a4ba;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#error h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#error p {
+  margin: 0;
 }
